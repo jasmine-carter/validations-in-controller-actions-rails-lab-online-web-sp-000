@@ -1,4 +1,7 @@
 class AuthorsController < ApplicationController
+
+  validates :name, presence: true
+
   def show
     @author = Author.find(params[:id])
   end
